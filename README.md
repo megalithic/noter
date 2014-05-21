@@ -32,13 +32,20 @@ it will open it in insert mode on a new line at the end of the file for you
 -- no muss, no fuss.
 
 
+### DEPLOYMENT:
+I like to keep all my utils and scripts in my `~/.dotfiles/bin` directory, so,
+I've included a simple `deploy.sh` script in this repo that you can execute,
+`./deploy.sh` and it will symlink the noter.rb script to your
+`~/.dotfiles/bin` directory.
+
+
 ### TODO n STUFF:
 * Get those command line options/switches workin', dog!
 * Handle archiving
 * Handle a more appropriate setup of files and folder locations.
 * Prepare the web counter-part for Dropbox/GitHub-hosted note viewing.
 * Migrate the script to GitHub.
-* Sigh, code smells in process_script method
+* Sigh, code smells in `process_script` method
 * Time-stamp new "chunks" of entries?
 * Tests!
 
