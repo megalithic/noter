@@ -2,17 +2,20 @@ NOTER!
 ======
 
 This is a super basic markdown-based note taking app for command-line users.
-It makes some assumptions already, but is flexible in other areas as well.
 
-Firstly, it assumes you're using Dropbox and that your Dropbox folder - with
-a subfolder called `notes` - exists at `~/Dropbox/notes`.
+There are certain assumptions Noter makes with regards to note storage, etc.
+Firstly, it assumes you use Dropbox and that you have a directory structure
+akin to this: `$HOME/Dropbox/notes`. Secondly, I personally recommend that you
+setup an alias to wherever you decide to put `noter.rb`, here is mine: `alias
+n=~/.dotfiles/bin/noter.rb`. One character aliases are awesome.
 
-Secondly, to make it easier to use, I suggest aliasing the script to
-something like this in your shell rc of choice:
-`alias n="ruby ~/.dotfiles/bin/noter.rb"`
+Lastly, I've provided a simple shell script to symlink noter.rb to the
+aforementioned location, so, just run `./link.sh`. Eventually, I'll add some
+smarts to it to first try `~/.dotfiles/bin`, if that fails, then it will go
+through some of the other obvious bin locations such as `/usr/local/bin`,
+`/opt/local/bin`, so on and so forth.
 
-That's it for 'setup'.
-
+That's it! Get to note taking.
 
 ### USAGE:
 
@@ -33,10 +36,12 @@ it will open it in insert mode on a new line at the end of the file for you
 
 
 ### DEPLOYMENT:
-I like to keep all my utils and scripts in my `~/.dotfiles/bin` directory, so,
-I've included a simple `deploy.sh` script in this repo that you can execute,
-`./deploy.sh` and it will symlink the noter.rb script to your
-`~/.dotfiles/bin` directory.
+One other feature of this little note-taking app is that I've setup some simple
+deployment actions to setup a basic markdown-parsing web app within your
+Dropbox/Public folder, to make it easier to view your notes from your mobile
+device (or from anywhere, really).
+
+-- coming soon.
 
 
 ### TODO n STUFF:

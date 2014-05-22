@@ -7,7 +7,7 @@ require 'pathname'
 require 'date'
 
 def note_text
-  ARGV[0]
+  ARGV[0] ||= ""
 end
 
 def default_file_path
